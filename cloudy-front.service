@@ -1,0 +1,14 @@
+[Unit]
+Description=Cloudy Chat Front
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=vagrant
+ExecStart=/home/vagrant/.cabal/bin/cloudy-front
+
+[Install]
+WantedBy=multi-user.target
