@@ -1,0 +1,14 @@
+[Unit]
+Description=Cloudy Watcher of Cloudy Core
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=vagrant
+ExecStart=/home/vagrant/.cabal/bin/cloudy-watcher
+
+[Install]
+WantedBy=multi-user.target

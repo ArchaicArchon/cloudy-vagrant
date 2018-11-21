@@ -1,0 +1,14 @@
+[Unit]
+Description=Cloudy Chat/Mud Core
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=vagrant
+ExecStart=/home/vagrant/.cabal/bin/cloudy-core
+
+[Install]
+WantedBy=multi-user.target
